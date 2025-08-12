@@ -1,29 +1,48 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block css %}
 <style>
-    div{
+    div {
         max-width: 400px;
         margin: 50px auto;
         padding: 20px;
         border: 1px solid black;
         border-radius: 24px;
     }
+    h1 {
+        text-align: center;
+        color: black;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    label {
+        font-weight: bold;
+        color: black;
+    }
+    input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
 <div>
-    <h1>Login</h1>
+    <h1>Login Page</h1>
     <form>
-        <label">Email</label>
+        <label>Email:</label>
         <input type="text">
 
-        <label>Password</label>
+        <label>Password:</label>
         <input type="password">
 
         <button type="submit">Login</button>
     </form>
-    <p>Don't have an account? <a href="/signup">Sign up</a> </p>
+    <p>Don't have an account ? <a href="/signup">signup</a> </p>
 </div>
+
 {% endblock %}
