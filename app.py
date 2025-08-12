@@ -14,10 +14,6 @@ def about():
 def login():
     return render_template('login.html')
 
-@app.route("/base")
-def base():
-    return render_template('base.html')
-
 if __name__ == '__main__':
     app.run(debug=True)
     
